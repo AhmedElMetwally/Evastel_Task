@@ -9,5 +9,26 @@
     "default": 10,
     "max": 50
   },
-  "mongodb": "mongodb://app_user:9daeh3r41c3r415b@localhost:27017/main_db"
+  "mongodb": "mongodb://app_user:9daeh3r41c3r415b@localhost:27017/main_db",
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "yaLYd5geetMExKqGn8uv64VLgumej/nN",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
 }

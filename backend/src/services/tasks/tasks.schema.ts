@@ -11,6 +11,7 @@ import { dataValidator, queryValidator } from '../../validators'
 export const tasksSchema = Type.Object(
   {
     _id: ObjectIdSchema(),
+    userId: ObjectIdSchema(),
     name: Type.String(),
     description: Type.String(),
     unixTimestamp: Type.Number(),

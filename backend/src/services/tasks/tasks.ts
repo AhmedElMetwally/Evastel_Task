@@ -23,6 +23,11 @@ export const tasksMethods = ['find', 'get', 'create', 'patch', 'remove'] as cons
 export * from './tasks.class'
 export * from './tasks.schema'
 
+// const preCreate = async (context: any) => {
+//   context.data.userId = context?.params?.user?._id || null
+//   return context
+// }
+
 // A configure function that registers the service and its hooks via `app.configure`
 export const tasks = (app: Application) => {
   // Register our service on the Feathers application
@@ -45,7 +50,10 @@ export const tasks = (app: Application) => {
       all: [schemaHooks.validateQuery(tasksQueryValidator), schemaHooks.resolveQuery(tasksQueryResolver)],
       find: [],
       get: [],
-      create: [schemaHooks.validateData(tasksDataValidator), schemaHooks.resolveData(tasksDataResolver)],
+      create: [
+        schemaHooks.validateData(tasksDataValidator),
+        schemaHooks.resolveData(tasksDataResolver),
+      ],
       patch: [schemaHooks.validateData(tasksPatchValidator), schemaHooks.resolveData(tasksPatchResolver)],
       remove: []
     },

@@ -1,0 +1,709 @@
+{
+	"info": {
+		"_postman_id": "9738db2e-35b5-444e-affc-06cb1ccbf40b",
+		"name": "E-VAS TEL Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7187308"
+	},
+	"item": [
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ahmned@gmail.com\",\n    \"password\": \"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ahmned@gmail.com\",\n    \"password\": \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Apr 2023 20:02:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"643076d083d3837bb8c809f0\",\n    \"email\": \"ahmned@gmail.com\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ahmned@gmail.com\",\n    \"password\": \"123456789\",\n    \"strategy\": \"local\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/authentication",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"authentication"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ahmned@gmail.com\",\n    \"password\": \"123456789\",\n    \"strategy\": \"local\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/authentication",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"authentication"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "557"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Apr 2023 20:03:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE2ODA4OTc4MjEsImV4cCI6MTY4MDk4NDIyMSwiYXVkIjoiaHR0cHM6Ly95b3VyZG9tYWluLmNvbSIsInN1YiI6IjY0MzA3NmQwODNkMzgzN2JiOGM4MDlmMCIsImp0aSI6ImUyMGRjY2I5LTI2MjYtNGNlOC1iZDI0LWI0NzYyMmYzMTJmNiJ9.vy9E7e3Iw9HJ58DPYC8z3mnm1ixRFgPN_PcWV2fUPaQ\",\n    \"authentication\": {\n        \"strategy\": \"local\",\n        \"payload\": {\n            \"iat\": 1680897821,\n            \"exp\": 1680984221,\n            \"aud\": \"https://yourdomain.com\",\n            \"sub\": \"643076d083d3837bb8c809f0\",\n            \"jti\": \"e20dccb9-2626-4ce8-bd24-b47622f312f6\"\n        }\n    },\n    \"user\": {\n        \"_id\": \"643076d083d3837bb8c809f0\",\n        \"email\": \"ahmned@gmail.com\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE2ODA4OTc4MjEsImV4cCI6MTY4MDk4NDIyMSwiYXVkIjoiaHR0cHM6Ly95b3VyZG9tYWluLmNvbSIsInN1YiI6IjY0MzA3NmQwODNkMzgzN2JiOGM4MDlmMCIsImp0aSI6ImUyMGRjY2I5LTI2MjYtNGNlOC1iZDI0LWI0NzYyMmYzMTJmNiJ9.vy9E7e3Iw9HJ58DPYC8z3mnm1ixRFgPN_PcWV2fUPaQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Task 1\",\n    \"description\": \"Desc 1\",\n    \"unixTimestamp\": 1680889548,\n    \"isDone\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Task",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Task 1\",\n    \"description\": \"Desc 1\",\n    \"unixTimestamp\": 1680889548,\n    \"isDone\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "151"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Apr 2023 20:05:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6430777983d3837bb8c809f3\",\n    \"name\": \"Task 1\",\n    \"description\": \"Desc 1\",\n    \"unixTimestamp\": 1680889548,\n    \"isDone\": false,\n    \"userId\": \"643076d083d3837bb8c809f0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE2ODA4OTc4MjEsImV4cCI6MTY4MDk4NDIyMSwiYXVkIjoiaHR0cHM6Ly95b3VyZG9tYWluLmNvbSIsInN1YiI6IjY0MzA3NmQwODNkMzgzN2JiOGM4MDlmMCIsImp0aSI6ImUyMGRjY2I5LTI2MjYtNGNlOC1iZDI0LWI0NzYyMmYzMTJmNiJ9.vy9E7e3Iw9HJ58DPYC8z3mnm1ixRFgPN_PcWV2fUPaQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/tasks/6430777983d3837bb8c809f3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"tasks",
+						"6430777983d3837bb8c809f3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Task",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/tasks/6430777983d3837bb8c809f3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"tasks",
+								"6430777983d3837bb8c809f3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "151"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Apr 2023 20:05:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6430777983d3837bb8c809f3\",\n    \"name\": \"Task 1\",\n    \"description\": \"Desc 1\",\n    \"unixTimestamp\": 1680889548,\n    \"isDone\": false,\n    \"userId\": \"643076d083d3837bb8c809f0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Tasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE2ODA4OTc4MjEsImV4cCI6MTY4MDk4NDIyMSwiYXVkIjoiaHR0cHM6Ly95b3VyZG9tYWluLmNvbSIsInN1YiI6IjY0MzA3NmQwODNkMzgzN2JiOGM4MDlmMCIsImp0aSI6ImUyMGRjY2I5LTI2MjYtNGNlOC1iZDI0LWI0NzYyMmYzMTJmNiJ9.vy9E7e3Iw9HJ58DPYC8z3mnm1ixRFgPN_PcWV2fUPaQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Tasks",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "496"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Apr 2023 20:06:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total\": 3,\n    \"limit\": 10,\n    \"skip\": 0,\n    \"data\": [\n        {\n            \"_id\": \"6430776783d3837bb8c809f1\",\n            \"name\": \"Task 1\",\n            \"description\": \"Desc 1\",\n            \"unixTimestamp\": 1680889548,\n            \"isDone\": false,\n            \"userId\": \"643076d083d3837bb8c809f0\"\n        },\n        {\n            \"_id\": \"6430777083d3837bb8c809f2\",\n            \"name\": \"Task 1\",\n            \"description\": \"Desc 1\",\n            \"unixTimestamp\": 1680889548,\n            \"isDone\": false,\n            \"userId\": \"643076d083d3837bb8c809f0\"\n        },\n        {\n            \"_id\": \"6430777983d3837bb8c809f3\",\n            \"name\": \"Task 1\",\n            \"description\": \"Desc 1\",\n            \"unixTimestamp\": 1680889548,\n            \"isDone\": false,\n            \"userId\": \"643076d083d3837bb8c809f0\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE2ODA4OTc4MjEsImV4cCI6MTY4MDk4NDIyMSwiYXVkIjoiaHR0cHM6Ly95b3VyZG9tYWluLmNvbSIsInN1YiI6IjY0MzA3NmQwODNkMzgzN2JiOGM4MDlmMCIsImp0aSI6ImUyMGRjY2I5LTI2MjYtNGNlOC1iZDI0LWI0NzYyMmYzMTJmNiJ9.vy9E7e3Iw9HJ58DPYC8z3mnm1ixRFgPN_PcWV2fUPaQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"name\": \"Task 1 Updated 2\",\n    \"description\": \"Desc 1\",\n    \"unixTimestamp\": 1680889548,\n    \"isDone\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/tasks/6430776783d3837bb8c809f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"tasks",
+						"6430776783d3837bb8c809f1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Task",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"name\": \"Task 1 Updated 2\",\n    \"description\": \"Desc 1\",\n    \"unixTimestamp\": 1680889548,\n    \"isDone\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/tasks/6430776783d3837bb8c809f1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"tasks",
+								"6430776783d3837bb8c809f1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "161"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Apr 2023 20:10:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6430776783d3837bb8c809f1\",\n    \"name\": \"Task 1 Updated 2\",\n    \"description\": \"Desc 1\",\n    \"unixTimestamp\": 1680889548,\n    \"isDone\": false,\n    \"userId\": \"643076d083d3837bb8c809f0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE2ODA4OTc4MjEsImV4cCI6MTY4MDk4NDIyMSwiYXVkIjoiaHR0cHM6Ly95b3VyZG9tYWluLmNvbSIsInN1YiI6IjY0MzA3NmQwODNkMzgzN2JiOGM4MDlmMCIsImp0aSI6ImUyMGRjY2I5LTI2MjYtNGNlOC1iZDI0LWI0NzYyMmYzMTJmNiJ9.vy9E7e3Iw9HJ58DPYC8z3mnm1ixRFgPN_PcWV2fUPaQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/tasks/6430776783d3837bb8c809f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"tasks",
+						"6430776783d3837bb8c809f1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Task",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/tasks/6430776783d3837bb8c809f1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"tasks",
+								"6430776783d3837bb8c809f1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "161"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Apr 2023 20:11:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6430776783d3837bb8c809f1\",\n    \"name\": \"Task 1 Updated 2\",\n    \"description\": \"Desc 1\",\n    \"unixTimestamp\": 1680889548,\n    \"isDone\": false,\n    \"userId\": \"643076d083d3837bb8c809f0\"\n}"
+				}
+			]
+		}
+	]
+}
